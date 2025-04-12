@@ -12,7 +12,7 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/UPMarcD/CMSC121MP_OnlineStore.git
 cd CMSC-121-MP
 ```
 
