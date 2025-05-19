@@ -8,7 +8,14 @@ const ordersRouter = require('./routes/orders');
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+// Configure CORS - More permissive for development
+app.use(cors({
+  origin: true, // Allow all origins in development
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json({ limit: '10mb' })); // Increase payload limit to 10mb
 
 // Add database connection test

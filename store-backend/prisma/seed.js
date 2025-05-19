@@ -10,7 +10,7 @@ async function main() {
     create: {
       email: 'seller@store.com',
       password: 'password123',
-      name: 'X & Y',
+      name: 'Marc',
       role: 'seller',
     },
   });
@@ -21,13 +21,13 @@ async function main() {
       where: { name: 'Laptop' },
       update: {
         image: '/images/laptop.png',
-        price: 999.99,
+        price: 45999.99,
         sellerId: seller.id
       },
       create: {
         name: 'Laptop',
         image: '/images/laptop.png',
-        price: 999.99,
+        price: 45999.99,
         seller: { connect: { id: seller.id } }
       },
     }),
@@ -35,13 +35,13 @@ async function main() {
       where: { name: 'Smartphone' },
       update: {
         image: '/images/smartphone.png',
-        price: 699.99,
+        price: 21999.99,
         sellerId: seller.id
       },
       create: {
         name: 'Smartphone',
         image: '/images/smartphone.png',
-        price: 699.99,
+        price: 21999.99,
         seller: { connect: { id: seller.id } }
       },
     }),
@@ -49,13 +49,13 @@ async function main() {
       where: { name: 'Programming Book' },
       update: {
         image: '/images/book.png',
-        price: 29.99,
+        price: 499.99,
         sellerId: seller.id
       },
       create: {
         name: 'Programming Book',
         image: '/images/book.png',
-        price: 29.99,
+        price: 499.99,
         seller: { connect: { id: seller.id } }
       },
     }),
@@ -63,13 +63,13 @@ async function main() {
       where: { name: 'T-Shirt' },
       update: {
         image: '/images/tshirt.jpg',
-        price: 19.99,
+        price: 199.99,
         sellerId: seller.id
       },
       create: {
         name: 'T-Shirt',
         image: '/images/tshirt.jpg',
-        price: 19.99,
+        price: 199.99,
         seller: { connect: { id: seller.id } }
       },
     }),
