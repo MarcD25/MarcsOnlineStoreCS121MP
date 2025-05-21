@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #D9822B;
+  --color-secondary: #D4B483;
+  --color-accent: #B45F06;
+  --color-background: #FAF5EF;
+  --color-surface: #F0E8DE;   
+  --color-text-primary: #3C2F2F;
+  --color-text-secondary: #7E6755;
+  --color-border: #E5DDD5;
+  --color-success: #A3B18A;
+  --color-warning: #E29578;
+  --color-error: #C0392B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1A1412;  
+    --color-surface: #2A2220;     
+    --color-text-primary: #FAF5EF; 
+    --color-text-secondary: #D4B483; 
+    --color-border: #3C2F2F;      
+    --color-primary: #D9822B;     
+    --color-secondary: #7E6755;   
+    --color-accent: #E29578;      
+  }
+}
+
+/* Base Styles */
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Common Elements */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-border);
+}
+
+/* Form Elements */
+input, select, textarea {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+select option {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(217, 130, 43, 0.2);
+}
+
+/* Navigation */
+nav {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav a,
+nav button {
+  font-size: 1.125rem; /* 18px */
+}
+
+.bg-gray-50 {
+  background-color: var(--color-surface) !important;
+}
+
+.max-w-4xl {
+  max-width: 64rem; /* 1024px */
+}
+
+/* Additional spacing for cart page */
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* Add these new styles */
+input, select {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.text-gray-800 {
+  color: var(--color-text-primary) !important;
+}
+
+.text-gray-600 {
+  color: var(--color-text-secondary) !important;
+}
+
+.text-gray-500 {
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
+/* Ensure form backgrounds are properly colored */
+form.bg-white {
+  background-color: var(--color-surface) !important;
+}
+
+/* Ensure divs with bg-white class use the correct background */
+div.bg-white {
+  background-color: var(--color-surface) !important;
+}
+
+/* Cart page specific styles */
+.cart-container {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 2rem;
+}
+
+.cart-header {
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.cart-item {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-total {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Navigation link styles */
+nav .text-xl.font-bold {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+nav .text-xl.font-bold:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation back button */
+nav a.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+nav a.flex:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a.flex svg {
+  transition: transform 0.2s;
+}
+
+nav a.flex:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Card Elements */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Status Colors */
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }
+
+.bg-success { background-color: var(--color-success); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-error { background-color: var(--color-error); }
+
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
