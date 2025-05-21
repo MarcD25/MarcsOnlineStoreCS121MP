@@ -1,4 +1,4 @@
-# Online Store Project 🛍️
+# Marc's Online Store 🛍️
 
 A full-stack e-commerce application built with Next.js, Express.js, and PostgreSQL. This project demonstrates a modern web application with user authentication, product management, shopping cart functionality, and order processing.
 
