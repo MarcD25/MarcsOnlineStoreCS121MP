@@ -1,83 +1,99 @@
-# Project Setup Guide
+# Online Store Project 🛍️
 
-## Prerequisites
-1. **Node.js**: Install the latest version of Node.js from [Node.js official website](https://nodejs.org/).
-2. **PostgreSQL**: Install PostgreSQL and pgAdmin4 from [PostgreSQL official website](https://www.postgresql.org/).
-3. **Git**: Install Git from [Git official website](https://git-scm.com/).
-4. **Prisma CLI**: Install Prisma globally using `npm install -g prisma`.
+A full-stack e-commerce application built with Next.js, Express.js, and PostgreSQL. This project demonstrates a modern web application with user authentication, product management, shopping cart functionality, and order processing.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## 🚀 Features
+
+- User authentication (login/signup)
+- Product listing and management
+- Shopping cart functionality with local storage persistence
+- Order processing system
+- Seller dashboard with real-time order tracking
+- Responsive design with dark mode support
+- Image upload and management for products
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 14**: React framework for production applications
+- **TypeScript**: Type-safe code
+- **TailwindCSS**: Utility-first CSS framework
+- **Context API**: State management
+
+### Backend
+- **Node.js & Express**: RESTful API server
+- **Prisma ORM**: Database operations and migrations
+- **PostgreSQL**: Relational database
+- **CORS**: Cross-Origin Resource Sharing support
+- Responsive design
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Next.js 14**: React framework for production-grade applications
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Typed superset of JavaScript
+- **Tailwind CSS**: Utility-first CSS framework for styling
+
+### Backend
+- **Node.js**: JavaScript runtime environment
+- **Express.js**: Web application framework for Node.js
+- **Prisma**: Next-generation ORM for Node.js and TypeScript
+- **PostgreSQL**: Open-source relational database
+- **JavaScript**: Core language for server-side logic and integration
+
+### Development Tools
+- **Git**: Version control system
+- **npm**: Package manager for Node.js
+- **pgAdmin4**: PostgreSQL administration tool
 
 ---
 
-## Steps to Set Up the Project
+## 🔧 Prerequisites
 
-### 1. Clone the Repository
+1. **Node.js**: v18+ ([Download](https://nodejs.org/))
+2. **PostgreSQL**: v14+ ([Download](https://www.postgresql.org/download/))
+3. **Git**: Latest version ([Download](https://git-scm.com/))
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/UPMarcD/CMSC121MP_OnlineStore.git
-cd CMSC-121-MP
+git clone https://github.com/yourusername/online-store.git
+cd online-store
 ```
 
-### 2. Set Up the Backend
-1. Navigate to the backend directory:
-   ```bash
-   cd store-backend
-   ```
+2. Set up the backend:
+```bash
+cd store-backend
+cp .env.example .env    # Copy and configure environment variables
+npm run setup          # Install dependencies and set up database
+```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+3. Set up the frontend:
+```bash
+cd ../store-frontend
+cp .env.example .env    # Copy and configure environment variables
+npm run setup          # Install dependencies and build
+```
 
-3. Generate the `.env` file:
-   - Run the provided batch file to create the `.env` file:
-     ```bash
-     ../create_env.bat
-     ```
-   - Update the `.env` file with your PostgreSQL connection string:
-     ```
-     DATABASE_URL="postgresql://<username>:<password>@localhost:5432/ecommerce"
-     ```
+## 🚀 Running the Application
 
-4. Create the database using pgAdmin4:
-   - Open pgAdmin4 and log in.
-   - In the left-hand navigation panel, right-click on "Databases" and select "Create > Database...".
-   - Enter `ecommerce` as the database name.
-   - Select the owner (your PostgreSQL username) and click "Save".
+1. Start the backend server:
+```bash
+cd store-backend
+npm run dev
+```
 
-5. Apply database migrations:
-   ```bash
-   npx prisma migrate dev
-   ```
+2. In a new terminal, start the frontend:
+```bash
+cd store-frontend
+npm run dev
+```
 
-6. Seed the database:
-   ```bash
-   npm run seed
-   ```
-
-7. Start the backend server:
-   ```bash
-   node app.js
-   ```
-
----
-
-### 3. Set Up the Frontend
-1. Navigate to the frontend directory:
-   ```bash
-   cd ../store-frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open the application in your browser:
-   - Visit [http://localhost:3000](http://localhost:3000).
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ---
 
@@ -86,7 +102,15 @@ cd CMSC-121-MP
 - If you encounter issues with the database connection, verify the `DATABASE_URL` in the `.env` file and ensure the database is properly set up in pgAdmin4.
 - For production, configure environment variables and use `npm run build` to build the frontend.
 
-## Default Admin Account
-After seeding the database, you can use the following admin account:
-- Email: seller@store.com
-- Password: password123
+## 🔑 Default Account
+After running the database seed, you can use the following demo account:
+- **Email**: seller@store.com
+- **Password**: password123
+
+## 🤝 Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

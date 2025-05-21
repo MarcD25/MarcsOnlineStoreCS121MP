@@ -1,11 +1,15 @@
 {
   "name": "store-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend server for the online store application",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node prisma/seed.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node prisma/seed.js",
+    "migrate": "npx prisma migrate deploy",
+    "setup": "npm install && npx prisma generate && npm run migrate && npm run seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
