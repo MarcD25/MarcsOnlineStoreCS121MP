@@ -2,8 +2,6 @@
 
 A full-stack e-commerce application built with Next.js, Express.js, and PostgreSQL. This project demonstrates a modern web application with user authentication, product management, shopping cart functionality, and order processing.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## 🚀 Features
 
 - User authentication (login/signup)
@@ -107,10 +105,4 @@ After running the database seed, you can use the following demo account:
 - **Email**: seller@store.com
 - **Password**: password123
 
-## 🤝 Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
