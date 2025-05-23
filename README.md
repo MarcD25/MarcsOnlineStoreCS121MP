@@ -15,21 +15,6 @@ A full-stack e-commerce application built with Next.js, Express.js, and PostgreS
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 14**: React framework for production applications
-- **TypeScript**: Type-safe code
-- **TailwindCSS**: Utility-first CSS framework
-- **Context API**: State management
-
-### Backend
-- **Node.js & Express**: RESTful API server
-- **Prisma ORM**: Database operations and migrations
-- **PostgreSQL**: Relational database
-- **CORS**: Cross-Origin Resource Sharing support
-- Responsive design
-
-## 🛠️ Tech Stack
-
-### Frontend
 - **Next.js 14**: React framework for production-grade applications
 - **React**: JavaScript library for building user interfaces
 - **TypeScript**: Typed superset of JavaScript
